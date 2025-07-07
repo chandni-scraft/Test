@@ -19,32 +19,32 @@ const Workshops = () => {
         keywords="medical school workshops, surgical skills training, suturing workshop, cannulation training, clinical procedures, NHS doctors"
       />
       <Navigation />
-      <div className="animate-fade-in" style={{ animationDelay: '100ms' }}>
+      <div className="opacity-100 transition-opacity duration-500 ease-in-out">
         <WorkshopHero />
       </div>
       
       {/* Course Info Section */}
-      <section className="py-12 md:py-16 lg:py-24 animate-fade-in" style={{ animationDelay: '200ms' }}>
+      <section className="py-12 md:py-16 lg:py-24 opacity-100 transition-opacity duration-500 ease-in-out">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-inter hover:scale-105 transition-transform duration-300">Course Info</h2>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
+            <div className="opacity-100 transition-opacity duration-500 ease-in-out">
               <CourseInfoGrid />
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <div className="opacity-100 transition-opacity duration-500 ease-in-out">
               <MainWorkshopSection />
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: '500ms' }}>
+            <div className="opacity-100 transition-opacity duration-500 ease-in-out">
               <BookingSection />
             </div>
           </div>
         </div>
       </section>
       
-      <div className="animate-fade-in" style={{ animationDelay: '600ms' }}>
+      <div className="opacity-100 transition-opacity duration-500 ease-in-out">
         <WorkshopFAQ />
       </div>
       

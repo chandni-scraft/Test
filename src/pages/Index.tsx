@@ -3,10 +3,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, FileText, Star, CheckCircle, Award, Target, TrendingUp, BookOpen, Stethoscope, GraduationCap } from "lucide-react";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [mainButtonText, setMainButtonText] = useState("RESERVE YOUR SPOT");
+  const [mobileButtonText, setMobileButtonText] = useState("Reserve Your Spot");
+
+  const handleMainButtonClick = (e) => {
+    setMainButtonText("BOOK YOUR PLACE");
+  };
+
+  const handleMobileButtonClick = (e) => {
+    setMobileButtonText("Book Your Place");
+  };
+
   return <div className="min-h-screen bg-background">
       <Navigation />
 
@@ -30,15 +42,15 @@ const Index = () => {
               LEADING THE WAY IN SURGICAL SKILLS FOR ASPIRING DOCTORS
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-50 leading-relaxed max-w-3xl mx-auto drop-shadow-xl shadow-black/60">Hands-On Surgical Skills. Realistic Patient Scenarios. Interview Training That Sets You Apart To Ace Your Medical School Application.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/workshops">
-                <Button size="lg" className="border-2 border-white px-12 py-6 text-xl font-semibold shadow-xl bg-[#0e4576] text-slate-50">
-                  REGISTER FOR A WORKSHOP
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+              <Link to="https://zcal.co/i/vIQpDhvL" className="w-full sm:w-auto text-center" onClick={handleMainButtonClick}>
+                <Button size="lg" className="w-full sm:w-auto border-2 border-white px-12 py-6 text-xl font-semibold shadow-xl bg-[#0e4576] text-slate-50">
+                  {mainButtonText}
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
               </Link>
-              <Link to="/about">
-                <Button variant="outline" size="lg" className="border-2 border-white px-12 py-6 text-xl font-semibold shadow-lg bg-secondary-500 hover:bg-secondary-400 text-white">
+              <Link to="/about" className="w-full sm:w-auto text-center">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white px-12 py-6 text-xl font-semibold shadow-lg bg-secondary-500 hover:bg-secondary-400 text-white">
                   LEARN MORE
                 </Button>
               </Link>
@@ -387,13 +399,15 @@ const Index = () => {
       <Footer />
 
       {/* Mobile-only floating button */}
-      <div className="md:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-        <Link to="/workshops">
-          <Button size="lg" className="bg-gradient-to-r from-[#0e4576] to-[#0d3d68] hover:from-[#0d3d68] hover:to-[#0c355a] text-white font-semibold px-8 py-4 text-lg shadow-2xl rounded-full border-2 border-white/20 backdrop-blur-sm animate-pulse hover:animate-none transition-all duration-300 hover:scale-105">
-            Reserve Your Spot
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </Link>
+      <div className="md:hidden fixed bottom-4 left-0 right-0 z-50">
+        <div className="flex justify-center">
+          <a href="https://zcal.co/i/vIQpDhvL" className="inline-block" onClick={handleMobileButtonClick}>
+            <Button size="sm" className="bg-gradient-to-r from-[#0e4576] to-[#0d3d68] hover:from-[#0d3d68] hover:to-[#0c355a] text-white font-medium py-2 px-4 text-sm shadow-lg rounded-full border border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-105">
+              {mobileButtonText}
+              <ArrowRight className="ml-1 h-3 w-3" />
+            </Button>
+          </a>
+        </div>
       </div>
     </div>;
 };
