@@ -26,7 +26,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center hover:opacity-80 transition-all duration-300 hover:scale-105">
             <img 
-              src="/lovable-uploads/cfad6aca-811a-4d99-a014-77771189f0d3.png" 
+              src="https://res.cloudinary.com/dyiso4ohk/image/upload/v1751895702/IMG_7286_l6lr69.png" 
               alt="SurgeAhead Logo" 
               className="h-8 md:h-10 w-auto"
             />
