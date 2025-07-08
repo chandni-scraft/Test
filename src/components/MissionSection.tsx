@@ -79,7 +79,7 @@ const MissionSection = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg border">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-2xl font-bold text-primary">250+</div>
                   <div className="text-sm text-muted-foreground">Students Trained</div>
                 </div>
               </div>

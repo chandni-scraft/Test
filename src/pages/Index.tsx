@@ -6,6 +6,7 @@ import { ArrowRight, Users, Calendar, FileText, Star, CheckCircle, Award, Target
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const [mainButtonText, setMainButtonText] = useState("RESERVE YOUR SPOT");
@@ -41,7 +42,7 @@ const Index = () => {
           }}>
               LEADING THE WAY IN SURGICAL SKILLS FOR ASPIRING DOCTORS
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-50 leading-relaxed max-w-3xl mx-auto drop-shadow-xl shadow-black/60">Hands-On Surgical Skills. Realistic Patient Scenarios. Interview Training That Sets You Apart To Ace Your Medical School Application.</p>
+            <p className="text-xl md:text-2xl mb-8 text-blue-50 leading-relaxed max-w-3xl mx-auto drop-shadow-xl shadow-black/60">UCAT workshop <span className="text-2xl md:text-3xl text-white">•</span> MMI Masterclass <span className="text-2xl md:text-3xl text-white">•</span> Surgical Skills Session <span className="text-2xl md:text-3xl text-white">•</span> Real life patient simulation</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
               <Link to="https://zcal.co/i/vIQpDhvL" className="w-full sm:w-auto text-center" onClick={handleMainButtonClick}>
                 <Button size="lg" className="w-full sm:w-auto border-2 border-white px-12 py-6 text-xl font-semibold shadow-xl bg-[#0e4576] text-slate-50">
@@ -75,49 +76,57 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
-              <CardContent className="p-8">
-                <div className="bg-blue-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                  <Users className="h-8 w-8 text-blue-600 mx-auto" />
-                </div>
-                <div className="text-4xl font-bold text-blue-600 mb-2 font-inter">500+</div>
-                <div className="text-muted-foreground font-medium">Students Trained</div>
-                <div className="text-sm text-muted-foreground mt-2">Across the UK</div>
-              </CardContent>
-            </Card>
+            <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }}>
+              <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="bg-blue-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                    <Users className="h-8 w-8 text-blue-600 mx-auto" />
+                  </div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2 font-inter">250+</div>
+                  <div className="text-muted-foreground font-medium">Students Trained</div>
+                  <div className="text-sm text-muted-foreground mt-2">Across the UK</div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
-              <CardContent className="p-8">
-                <div className="bg-green-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                  <TrendingUp className="h-8 w-8 text-green-600 mx-auto" />
-                </div>
-                <div className="text-4xl font-bold text-green-600 mb-2 font-inter">95%</div>
-                <div className="text-muted-foreground font-medium">Success Rate</div>
-                <div className="text-sm text-muted-foreground mt-2">Medical School Offers</div>
-              </CardContent>
-            </Card>
+            <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
+              <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="bg-green-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                    <TrendingUp className="h-8 w-8 text-green-600 mx-auto" />
+                  </div>
+                  <div className="text-4xl font-bold text-green-600 mb-2 font-inter">95%</div>
+                  <div className="text-muted-foreground font-medium">Success Rate</div>
+                  <div className="text-sm text-muted-foreground mt-2">Medical School Offers</div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
-              <CardContent className="p-8">
-                <div className="bg-purple-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                  <Stethoscope className="h-8 w-8 text-purple-600 mx-auto" />
-                </div>
-                <div className="text-4xl font-bold text-purple-600 mb-2 font-inter">10+</div>
-                <div className="text-muted-foreground font-medium">UK Trained Doctors &</div>
-                <div className="text-sm text-muted-foreground mt-2">UK Medical Students</div>
-              </CardContent>
-            </Card>
+            <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
+              <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="bg-purple-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+                    <Stethoscope className="h-8 w-8 text-purple-600 mx-auto" />
+                  </div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2 font-inter">10+</div>
+                  <div className="text-muted-foreground font-medium">UK Trained Doctors &</div>
+                  <div className="text-sm text-muted-foreground mt-2">UK Medical Students</div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
-              <CardContent className="p-8">
-                <div className="bg-orange-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
-                  <GraduationCap className="h-8 w-8 text-orange-600 mx-auto" />
-                </div>
-                <div className="text-4xl font-bold text-orange-600 mb-2 font-inter">50+</div>
-                <div className="text-muted-foreground font-medium">Workshops Delivered</div>
-                <div className="text-sm text-muted-foreground mt-2">And counting</div>
-              </CardContent>
-            </Card>
+            <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
+              <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm group hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="bg-yellow-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-yellow-200 transition-colors">
+                    <Star className="h-8 w-8 text-yellow-500 mx-auto" />
+                  </div>
+                  <div className="text-4xl font-bold text-yellow-500 mb-2 font-inter">100%</div>
+                  <div className="text-muted-foreground font-medium">Student Satisfaction</div>
+                  <div className="text-sm text-muted-foreground mt-2">Based on feedback</div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
 
           {/* Additional visual element */}
@@ -173,132 +182,33 @@ const Index = () => {
       <section className="py-16 lg:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Our Services</h2>
-            <p className="text-xl text-muted-foreground">Comprehensive support for your medical career journey</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Our Flagship Course</h2>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Flagship Workshop */}
-            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white shadow-lg hover:shadow-xl transition-all duration-300 relative">
-              <Badge className="absolute -top-3 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white border-0 px-3 py-1 font-semibold">
-                <Award className="h-3 w-3 mr-1" />
-                Our Flagship Course
-              </Badge>
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <Users className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-2xl">Surgical Skills & Medical School Prep Workshop</CardTitle>
-                    <CardDescription className="text-lg mt-2">Our flagship immersive experience</CardDescription>
-                  </div>
+          <div className="max-w-3xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
+              <div className="bg-white/90 rounded-2xl shadow-xl border border-blue-100 p-8 md:p-12 relative">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
+                  <span className="bg-[#0e4576] text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg flex items-center"><Award className="h-4 w-4 mr-2" /> Flagship Experience</span>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <img src="/lovable-uploads/232d5ebc-7c25-485d-bb16-e7cbbad0d7b4.png" alt="Students learning surgical skills with instructor" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="text-sm font-medium">Hands-on Training</div>
-                  </div>
+                <div className="mb-8 mt-6 text-center">
+                  <p className="text-lg md:text-xl text-muted-foreground">A unique, all-in-one experience to prepare you for medical school success.</p>
                 </div>
-                
-                <p className="text-muted-foreground">
-                  Led by UK trained doctors, this immersive session combines real surgical training with essential medical school preparation.
-                </p>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">Surgical Skills Training</h4>
-                      <p className="text-sm text-muted-foreground">Safe handling, incisions, suturing, wound care</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">Application Insights</h4>
-                      <p className="text-sm text-muted-foreground">UCAS process breakdown with insider tips</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">MMI Preparation</h4>
-                      <p className="text-sm text-muted-foreground">Master interviews with ethical scenarios</p>
-                    </div>
-                  </div>
+                <div className="mb-8 flex justify-center">
+                  <img src="/lovable-uploads/232d5ebc-7c25-485d-bb16-e7cbbad0d7b4.png" alt="Students learning surgical skills with instructor" className="rounded-lg shadow-lg max-h-64 w-auto object-cover" />
                 </div>
-                
-                <Link to="/workshops">
-                  <Button className="w-full mt-4 text-white font-semibold bg-[#0f4478]">
-                    Register Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Personal Statement Support */}
-            <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <FileText className="h-8 w-8 text-green-600" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-2xl">Personal Statement Support</CardTitle>
-                    <CardDescription className="text-lg mt-2">One-to-one mentoring from Doctors and Medical Students</CardDescription>
-                  </div>
+                <ul className="space-y-6 text-left text-lg md:text-xl">
+                  <li className="flex items-start gap-3"><CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" /><span><span className="font-bold">UCAT Workshop</span> – Strategic UCAT preparation designed to secure your medical school interview</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" /><span><span className="font-bold">MMI Masterclass</span> – Simulate the real thing, build confidence, structure answers, and stand out on interview day</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" /><span><span className="font-bold">Surgical Skills session</span> – A hands-on workshop to build real surgical skills and get ahead.</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" /><span><span className="font-bold">Real life simulated patient scenarios</span> – Learn to think and act like a doctor to make yourself stand out.</span></li>
+                </ul>
+                <div className="mt-10 text-center">
+                  <Link to="/workshops">
+                    <Button size="lg" className="bg-[#0e4576] hover:bg-[#0d3d68] text-white font-semibold px-8 py-4 text-lg shadow-lg rounded-full">Register Now <ArrowRight className="ml-2 h-5 w-5" /></Button>
+                  </Link>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <img src="/lovable-uploads/35e3f815-9555-442c-b206-e534ff30f448.png" alt="Medical education lecture with students" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="text-sm font-medium">Expert Guidance</div>
-                  </div>
-                </div>
-                
-                <p className="text-muted-foreground">
-                  Your personal statement is your first impression — it needs to be sharp, authentic, and compelling.
-                </p>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">Strategic Guidance</h4>
-                      <p className="text-sm text-muted-foreground">Plan and structure from the ground up</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">Detailed Feedback</h4>
-                      <p className="text-sm text-muted-foreground">Line-by-line review from qualified doctors</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">Unlimited Revisions</h4>
-                      <p className="text-sm text-muted-foreground">Continued support through multiple drafts</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full mt-4 border-2 border-green-600 text-green-700 hover:bg-green-50 font-semibold">
-                    Get Support
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -324,7 +234,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Emily S.</div>
-                    <div className="text-sm text-muted-foreground">Year 13, Now at King's College London</div>
+                    <div className="text-sm text-muted-foreground">Year 13</div>
                   </div>
                 </div>
               </CardContent>
@@ -342,7 +252,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Arun R.</div>
-                    <div className="text-sm text-muted-foreground">Year 12, Birmingham</div>
+                    <div className="text-sm text-muted-foreground">Year 12</div>
                   </div>
                 </div>
               </CardContent>
@@ -362,7 +272,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Sarah L.</div>
-                    <div className="text-sm text-muted-foreground">Year 13, Manchester</div>
+                    <div className="text-sm text-muted-foreground">Year 13</div>
                   </div>
                 </div>
               </CardContent>
@@ -389,7 +299,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="px-8 py-4 font-semibold text-[[#104475]] text-[#104475] bg-slate-50">
+              <Button size="lg" variant="outline" className="px-8 py-4 font-semibold text-[#104475] text-[#104475] bg-slate-50">
                 Contact Us
               </Button>
             </Link>

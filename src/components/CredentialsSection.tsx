@@ -20,13 +20,6 @@ const CredentialsSection = () => {
               <p className="text-muted-foreground mb-4">
                 All our instructors are fully qualified UK trained medical professionals with active clinical practice.
               </p>
-              <div className="flex justify-center">
-                <img 
-                  src="/lovable-uploads/cc7be550-7a69-4180-8b1a-f30d5155a11e.png" 
-                  alt="UK Trained Doctors" 
-                  className="h-12 object-contain"
-                />
-              </div>
             </CardContent>
           </Card>
           
